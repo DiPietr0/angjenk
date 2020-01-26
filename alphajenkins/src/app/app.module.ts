@@ -14,6 +14,7 @@ import { ByeComponent } from './bye/bye.component';
   imports: [
     BrowserModule
   ],
+
   providers: [],
   bootstrap: [AppComponent]
 })

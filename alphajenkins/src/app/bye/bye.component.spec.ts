@@ -1,25 +1,21 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { ByeComponent } from './bye.component';
 
 describe('ByeComponent', () => {
   let component: ByeComponent;
-  let fixture: ComponentFixture<ByeComponent>;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [ ByeComponent ]
-    })
-    .compileComponents();
+  beforeEach((() => {
+    component = new ByeComponent();
   }));
 
-  beforeEach(() => {
-    fixture = TestBed.createComponent(ByeComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
 
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('add should add numbers', () => {
+    const nr1 = 2;
+    const nr2 = 3;
+    expect(component.add(nr1, nr2)).toEqual(5);
+  });
+  
 });

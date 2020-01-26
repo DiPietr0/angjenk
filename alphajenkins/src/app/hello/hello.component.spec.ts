@@ -1,25 +1,23 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { HelloComponent } from './hello.component';
 
 describe('HelloComponent', () => {
   let component: HelloComponent;
-  let fixture: ComponentFixture<HelloComponent>;
-
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [ HelloComponent ]
-    })
-    .compileComponents();
-  }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(HelloComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
+    component = new HelloComponent();
   });
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  describe('overAMillion', () => {
+    it('should return blab bla', () => {
+      expect(component.overAMillion(1000001)).toEqual('över en miljion');
+    });
+
+    it('should return blab bla', () => {
+      expect(component.overAMillion(10)).toEqual('ej över en miljon')
+    });
   });
 });

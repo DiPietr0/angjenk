@@ -14,4 +14,7 @@ export class HelloComponent implements OnInit {
   ngOnInit() {
   }
 
+  overAMillion(nr: number): String {
+    return nr > 1000000 ? 'över en miljion' : 'ej över en miljon';
+  }
 }
